@@ -47,3 +47,28 @@ else
   sudo ln -s $HOME/.local/kitty.app/bin/kitty /usr/bin/kitty
   sudo ln -s $HOME/.local/kitty.app/bin/kitten /usr/bin/kitten
 fi
+
+# ========== STEAM ==========
+if command -v "steam" &> /dev/null; then
+  echo "- steam is installed"
+else
+  echo "- steam is not installed"
+  echo "- installing it..."
+  paru -Sy steam
+  paru -Sy gamemode lib32-gamemode
+  echo "- steam need to start with the `-system-composer` argument"
+  paru -Sy gamescope
+
+  # need to create a steam.desktop file with variables defined in it
+  STEAM_DESKTOP_APP="$HOME/.local/share/applications/steam.desktop"
+  touch $STEAM_DESKTOP_APP
+  cat << EOT > $STEAM_DESKTOP_APP
+[Desktop Entry]
+PrefersNonDefaultGPU=false
+STEAM_FORCE_DESKTOPUI_SCALING=1 steam
+EOT
+fi
+
+# ========== FONTS ==========
+echo "- installing jetbrains mono nerd font"
+paru -Sy ttf-jetbrains-mono-nerd
