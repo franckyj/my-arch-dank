@@ -39,17 +39,6 @@ dms keybinds remove niri "Mod+Shift+Ctrl+Right"
 dms keybinds remove niri "Mod+Shift+Ctrl+Up"
 dms keybinds remove niri "Mod+Shift+Ctrl+Left"
 
-# replace some Mod+Shift with Mod+Ctrl
-dms keybinds set niri "Mod+Ctrl+Left" "move-column-left" \
-  --replace-key "Mod+Shift+Left"
-dms keybinds set niri "Mod+Ctrl+H" "move-column-left" \
-  --replace-key "Mod+Shift+H"
-
-dms keybinds set niri "Mod+Ctrl+Right" "move-column-right" \
-  --replace-key "Mod+Shift+Right"
-dms keybinds set niri "Mod+Ctrl+L" "move-column-left" \
-  --replace-key "Mod+Shift+L"
-
 # remove all the mouse scroll wheel stuff
 # Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
 # Mod+Ctrl+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
@@ -91,3 +80,10 @@ dms keybinds remove niri "Mod+Page_Down"
 dms keybinds remove niri "Mod+Page_Up"
 dms keybinds remove niri "Mod+Shift+Page_Down"
 dms keybinds remove niri "Mod+Shift+Page_Up"
+
+# remove the "center-column" bind
+dms keybinds remove niri "Mod+C"
+dms keybinds remove niri "Mod+Ctrl+C"
+
+# create the outputs file with some extra settings
+cat ./niri-config-outputs.kdl > $HOME/.config/niri/dms/outputs.kdl

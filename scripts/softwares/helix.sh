@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "========== HELIX =========="
+if command -v "helix" &> /dev/null; then
+  echo "- helix is installed"
+else
+  echo "- helix is not installed"
+  echo "- installing it..."
+  paru -Sy helix
+  echo "- creating helix symlinks to $HOME/.config/helix..."
+  # ln [source] [link]
+  mkdir -p $HOME/.config/helix
+  ln -s $(realpath ./helix-config.toml) $HOME/.config/helix/config.toml
+  ln -s $(realpath ./helix-languages.toml) $HOME/.config/helix/languages.toml
+fi
