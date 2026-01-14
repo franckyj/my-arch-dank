@@ -7,6 +7,10 @@ dms keybinds set niri "Mod+Return" "spawn kitty" \
   --desc "Open terminal" \
   --replace-key "Mod+T"
 
+  # by default Mod+B spawns the brave
+dms keybinds set niri "Mod+B" "spawn brave" \
+  --desc "Open browser"
+
 # remove all the "focus monitors" since this is on a laptop
 # Mod+Ctrl+H { focus-monitor-left; }
 # Mod+Ctrl+J { focus-monitor-down; }
