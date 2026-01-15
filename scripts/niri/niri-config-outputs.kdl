@@ -100,3 +100,25 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
 }
+
+workspace "browser" { }
+workspace "dev" { }
+workspace "chat" { }
+
+window-rule {
+    match app-id=r#"brave-browser"#
+    open-on-workspace "dev"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="code"
+    open-on-workspace "dev"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="discord"
+    open-on-workspace "chat"
+    open-maximized true
+}

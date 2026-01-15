@@ -18,3 +18,13 @@ my arch configuration for dank linux
 - run the install script
   - `chmod +x ./install.sh`
   - `./install.sh`
+
+## dms settings
+
+- wallpapers path
+- settings
+  - named workspaces
+  - typography
+  - dank bar
+  - launcher
+  - etc.
