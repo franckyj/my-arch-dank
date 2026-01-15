@@ -8,6 +8,7 @@ echo "========== INSTALLING SOFTWARES =========="
 ./kitty.sh
 ./helix.sh
 ./steam.sh
+./discord.sh
 ./fonts.sh
 popd
 echo "========== CUSTOMIZING KEYBINDS =========="
