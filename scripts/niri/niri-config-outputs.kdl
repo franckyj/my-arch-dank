@@ -101,31 +101,31 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-workspace "chat" { }
+workspace "web" { }
 workspace "dev" { }
-workspace "browser" { }
+workspace "gaming" { }
 
 window-rule {
     match app-id="discord"
-    open-on-workspace "chat"
+    open-on-workspace "gaming"
     open-maximized true
 }
 
 window-rule {
     match app-id="code"
     open-on-workspace "dev"
-    open-maximized true
+    open-maximized false
 }
 
 window-rule {
     match app-id="kitty"
     match title="helix.+"
     open-on-workspace "dev"
-    open-maximized true
+    open-maximized false
 }
 
 window-rule {
     match app-id=r#"brave-browser"#
-    open-on-workspace "browser"
+    open-on-workspace "web"
     open-maximized true
 }
