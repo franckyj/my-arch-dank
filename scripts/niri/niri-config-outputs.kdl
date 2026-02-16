@@ -68,8 +68,8 @@ input {
         // drag false
         // drag-lock
         natural-scroll
-        // accel-speed 0.2
-        accel-profile "flat"
+        accel-speed 0.1
+        // accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
     }
@@ -128,4 +128,12 @@ window-rule {
     match app-id=r#"brave-browser"#
     open-on-workspace "web"
     open-maximized true
+}
+
+// floating window for simcity project
+window-rule {
+    match app-id=r#"sim_city"#
+    open-on-workspace "dev"
+    open-maximized true
+    open-floating true
 }

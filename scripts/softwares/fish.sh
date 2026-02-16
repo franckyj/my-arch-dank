@@ -9,4 +9,7 @@ else
   paru -Sy fish
   echo "- changing shell..."
   chsh -s /usr/bin/fish
+
+  # create a fish_prompt.fish file in ~/.config/fish/functions folder
+  # run `fish_config` to set your prompt
 fi

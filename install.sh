@@ -10,6 +10,9 @@ echo "========== INSTALLING SOFTWARES =========="
 ./steam.sh
 ./discord.sh
 ./fonts.sh
+./sdl3.sh
+./opencode.sh
+./copilot.sh
 popd
 echo "========== CUSTOMIZING KEYBINDS =========="
 pushd ./scripts/niri
