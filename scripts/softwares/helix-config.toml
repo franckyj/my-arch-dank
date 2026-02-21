@@ -26,8 +26,6 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-# ctx7sk-4d82aa2c-c6ca-4c69-9a73-1c36f9708a4b
-
 [editor.indent-guides]
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
